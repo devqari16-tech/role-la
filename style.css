@@ -2020,6 +2020,152 @@ a.contact-item:hover {
 }
 
 /* ============================================
+   SERVICE AREAS
+   ============================================ */
+.service-areas {
+  background: var(--off-white);
+}
+
+.areas-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.map-pin-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.map-city {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--white);
+  border: 1.5px solid rgba(12,31,94,0.1);
+  border-radius: 50px;
+  padding: 9px 16px 9px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-city:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 16px rgba(255,107,26,0.15);
+  transform: translateY(-2px);
+}
+
+.map-city.primary-city {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  font-weight: 600;
+}
+
+.map-city.primary-city:hover {
+  background: var(--navy-mid);
+  border-color: var(--navy-mid);
+}
+
+.city-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.city-tag {
+  background: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.areas-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.area-radius-badge {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--white);
+  border: 1.5px solid rgba(255,107,26,0.25);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.radius-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  font-family: 'Oswald', sans-serif;
+}
+
+.radius-lbl {
+  font-size: 13px;
+  color: var(--gray-mid);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.areas-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.areas-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.area-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.area-perk svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.areas-cta {
+  align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+  .areas-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-city { font-size: 13px; padding: 8px 13px 8px 9px; }
+  .radius-num { font-size: 26px; }
+}
+
+/* ============================================
    GLOBAL MOBILE OVERFLOW FIX
    ============================================ */
 @media (max-width: 768px) {
